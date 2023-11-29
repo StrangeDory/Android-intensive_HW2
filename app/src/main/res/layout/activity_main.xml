@@ -1,306 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_DFE8F2"
     android:orientation="vertical"
+    android:padding="@dimen/dimen_16"
     tools:context=".MainActivity">
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/countriesScrollView"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imageHint"
+        app:layout_constraintBottom_toTopOf="@id/imageURLEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/countriesLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dimen_16"
-            android:orientation="vertical">
+    <EditText
+        android:id="@+id/imageURLEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/editTextHint"
+        android:inputType="textUri"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/austriaTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dimen_16"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Austria"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <View
-                android:id="@+id/austriaRedUpView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_50"
-                android:background="@color/redAustria" />
-
-            <View
-                android:id="@+id/austriaWhiteView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_50"
-                android:background="@color/white" />
-
-            <View
-                android:id="@+id/austriaRedDownView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_50"
-                android:background="@color/redAustria" />
-
-
-            <TextView
-                android:id="@+id/polandTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Poland"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <View
-                android:id="@+id/polandWhiteView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_75"
-                android:background="@color/white" />
-
-            <View
-                android:id="@+id/polandRedView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_75"
-                android:background="@color/redPoland" />
-
-            <TextView
-                android:id="@+id/italyTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Italy"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <LinearLayout
-                android:id="@+id/italyLayout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_150"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/italyGreenView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/greenItaly" />
-
-                <View
-                    android:id="@+id/italyWhiteView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/white" />
-
-                <View
-                    android:id="@+id/italyRedView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/redItaly" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/columbiaTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Columbia"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <View
-                android:id="@+id/columbiaYellowView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_75"
-                android:background="@color/yellowColumbia" />
-
-            <View
-                android:id="@+id/columbiaBlueView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_38"
-                android:background="@color/blueColumbia" />
-
-            <View
-                android:id="@+id/columbiaRedView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_38"
-                android:background="@color/redColumbia" />
-
-            <TextView
-                android:id="@+id/madagascarTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Madagascar"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <LinearLayout
-                android:id="@+id/madagascarLayout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_150"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/madagascarWhiteView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.5"
-                    android:background="@color/white" />
-
-                <LinearLayout
-                    android:id="@+id/madagascarRedGreenLayout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <View
-                        android:id="@+id/madagascarRedView"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/dimen_75"
-                        android:background="@color/redMadagascar" />
-
-                    <View
-                        android:id="@+id/madagascarGreenView"
-                        android:layout_width="match_parent"
-                        android:layout_height="75dp"
-                        android:background="@color/greenMadagascar" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/thailandTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Thailand"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <View
-                android:id="@+id/thailandRedUpView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_25"
-                android:background="@color/redThailand" />
-
-            <View
-                android:id="@+id/thailandWhiteUpView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_25"
-                android:background="@color/white" />
-
-            <View
-                android:id="@+id/thailandBlueView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_50"
-                android:background="@color/blueThailand" />
-
-            <View
-                android:id="@+id/thailandWhiteDownView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_25"
-                android:background="@color/white" />
-
-            <View
-                android:id="@+id/thailandRedDownView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_25"
-                android:background="@color/redThailand" />
-
-            <TextView
-                android:id="@+id/denmarkTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Denmark"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/denmarkLayout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_150"
-                android:background="@color/redDenmark">
-
-                <View
-                    android:layout_width="@dimen/dimen_25"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/dimen_50"
-                    android:background="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dimen_25"
-                    android:background="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/switzerlandTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="@font/neuestanley"
-                android:text="@string/Switzerland"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_18" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/switzerlandLayout"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_150"
-                android:background="@color/redSwitzerland">
-
-                <View
-                    android:id="@+id/switzerlandVerticalView"
-                    android:layout_width="@dimen/dimen_36"
-                    android:layout_height="@dimen/dimen_110"
-                    android:background="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/switzerlandHorizontalView"
-                    android:layout_width="@dimen/dimen_110"
-                    android:layout_height="@dimen/dimen_36"
-                    android:background="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
