@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/countriesScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/countriesLayout"
+            android:layout_margin="@dimen/dimen_16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/austriaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Austria"
+                android:textAlignment="center"
+                android:layout_marginBottom="@dimen/dimen_16"/>
+
+            <View
+                android:id="@+id/austriaRedUpView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:background="@color/redAustria"/>
+            <View
+                android:id="@+id/austriaWhiteView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:background="@color/white"/>
+            <View
+                android:id="@+id/austriaRedDownView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:background="@color/redAustria"/>
+
+
+            <TextView
+                android:id="@+id/polandTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Poland"
+                android:textAlignment="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+            <View
+                android:id="@+id/polandWhiteView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_75"
+                android:background="@color/white"/>
+            <View
+                android:id="@+id/polandRedView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_75"
+                android:background="@color/redPoland"/>
+
+            <TextView
+                android:id="@+id/italyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Italy"
+                android:textAlignment="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+            <LinearLayout
+                android:id="@+id/italyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_150"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/italyGreenView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/greenItaly"/>
+                <View
+                    android:id="@+id/italyWhiteView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"/>
+                <View
+                    android:id="@+id/italyRedView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/redItaly"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
