@@ -2,9 +2,25 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue_DFE8F2">#DFE8F2</color>
 
     <color name="redAustria">#EF3340</color>
     <color name="redPoland">#D22630</color>
+
     <color name="greenItaly">#007A33</color>
     <color name="redItaly">#CB333B</color>
+
+    <color name="yellowColumbia">#FFCD00</color>
+    <color name="blueColumbia">#003087</color>
+    <color name="redColumbia">#C8102E</color>
+
+    <color name="redMadagascar">#F9423A</color>
+    <color name="greenMadagascar">#00843D</color>
+
+    <color name="redThailand">#EF3340</color>
+    <color name="blueThailand">#00205B</color>
+
+    <color name="redDenmark">#DA291C</color>
+
+    <color name="redSwitzerland">#DA291C</color>
 </resources>
